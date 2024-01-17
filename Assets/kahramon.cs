@@ -23,9 +23,7 @@ public class Kahramon : MonoBehaviour
 
     void Start()
     {
-        healthSlider = GetComponentInChildren<Slider>();
         _rgb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
     }
 
     void Update()
@@ -76,13 +74,6 @@ public class Kahramon : MonoBehaviour
         {
             canJump = true;
             jumpsRemaining = 2;
-        }
-
-        // Eğer karakter belirli bir nesne ile temas ederse, sağlığını arttır
-        if (collision.gameObject.CompareTag("Buz"))
-        {
-            currentHealth = Mathf.Min(maxHealth, currentHealth + healAmount);
-            UpdateHealthBar();
         }
     }
 

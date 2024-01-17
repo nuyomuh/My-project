@@ -392,7 +392,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &446641828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -438,6 +438,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6912632, y: 2.6471596}
   m_EdgeRadius: 0
+--- !u!114 &446641832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446641821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59c11dbb905f8245836e504e14179ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &464866463
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,11 +696,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 149954983652433154, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.24
+      value: -23.75
       objectReference: {fileID: 0}
     - target: {fileID: 149954983652433154, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.27
+      value: 9.24
       objectReference: {fileID: 0}
     - target: {fileID: 149954983652433154, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -736,7 +748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 149954983652433165, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
       propertyPath: m_Name
-      value: IceGolem
+      value: Buz
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -748,6 +760,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 149954983652433165, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
       insertIndex: -1
       addedObject: {fileID: 446641828}
+    - targetCorrespondingSourceObject: {fileID: 149954983652433165, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 446641832}
   m_SourcePrefab: {fileID: 100100000, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
 --- !u!1 &549709760
 GameObject:
@@ -1527,7 +1542,7 @@ Transform:
   m_GameObject: {fileID: 1079237788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.788, y: 93.4614, z: 0}
+  m_LocalPosition: {x: 66.86, y: 93.17, z: 0}
   m_LocalScale: {x: 20.593395, y: 23.149483, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3561,7 +3576,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 14
-      m_TileSpriteIndex: 14
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9330,10 +9345,10 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 42a95692aa7c99848b3e861073259e0d, type: 3}
   - m_RefCount: 16
     m_Data: {fileID: 21300000, guid: 83af88527352393498c344ea871bc465, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -3357430747320705636, guid: cf76bdf34e0742348bec4f1456601b10, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -3357430747320705636, guid: cf76bdf34e0742348bec4f1456601b10, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 717
     m_Data:
@@ -9807,6 +9822,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2022910574}
+  healthSlider: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0
+  decreaseRate: 1
+  healAmount: 20
 --- !u!1001 &2119601339
 PrefabInstance:
   m_ObjectHideFlags: 0
