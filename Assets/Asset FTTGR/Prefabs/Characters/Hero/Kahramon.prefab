@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7422517058925832473}
   - component: {fileID: 7422517058925832472}
   m_Layer: 0
-  m_Name: Hero
-  m_TagString: Untagged
+  m_Name: Kahramon
+  m_TagString: Kahramon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

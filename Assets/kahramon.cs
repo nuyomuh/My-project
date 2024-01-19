@@ -16,7 +16,7 @@ public class Kahramon : MonoBehaviour
     private bool canJump;
 
     // Sağlık kontrolü için değişkenler
-    public float maxHealth = 100f;
+    public float maxHealth = 30f;
     public float currentHealth;
     public float decreaseRate = 1f;
     public float healAmount = 20f;
@@ -49,14 +49,7 @@ public class Kahramon : MonoBehaviour
             animator.SetBool("IsJumping", false);
         }
 
-        // Vurma animasyonunu kontrol et
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Hitting"))
-            {
-                animator.SetTrigger("IsHitting");
-            }
-        }
+     
 
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
